@@ -59,7 +59,7 @@ const Purchase = () => {
                             <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2 mt-3' type="submit" value='Continue Payment' />
                         </form>
                         <div>
-                            <p className='text-red-500 mt-10 px-10'> {`/*`} Please use the demo card number <span className='font-semibold'>4242 4242 4242 4242</span> then you can use any future date and in cvc type 5 digit {`*/`}</p>
+                            <p className='text-black-500 mt-10 px-10'> {`/*`} Please use the demo card number <span className='font-bold'>4242 4242 4242 4242</span> then you can use any future date and in cvc type 5 digit {`*/`}</p>
                         </div>
                     </div>
                 </div>

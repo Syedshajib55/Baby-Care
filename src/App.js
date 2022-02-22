@@ -45,7 +45,7 @@ function App() {
           <PrivateRoute path='/car-details/:id'>
             <Purchase></Purchase>
           </PrivateRoute>
-          <Route path='/register'>
+          <Route path='/registers'>
             <Register></Register>
           </Route>
           <PrivateRoute path='/dashboard'>
