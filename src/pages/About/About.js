@@ -17,7 +17,7 @@ Babycare is currently providing services in all over the country while providing
                     {/* <p>We are a car saleing company who sales modern new updated cars from the top class renowned companys cars like Audi,
                          Lamborgini, Bugati, Nissan, Toyota, Alion etc.One model would be the exclusive high-end V12 model that represented 
                          the best that Lamborghini could achieve, that was the Murcielago. The other would be a slightly toned-down V10 version 
-                         of that with unique styling and features, and that was the Gallardo, which debuted in 2003. Following the strategy, 
+                         of that with unique styling and  features, and that was the Gallardo, which debuted in 2003. Following the strategy, 
                          these two models have since been replaced by the Aventador and the Huracan respectively In this way, the Murcielago 
                          name became symbolic if not prophetic for Lamborghini. Though it was the Diablo that signaled a new era for Lamborghini, it was the Murcielago that was to set the bar for the Lamborghini models to come. You can still see much of its style in the Gallardo, and even in the Aventador and Huracan.</p> */}
                     {/* <h4 className='my-3 font-semibold'>We started our journey in 14th January 1999</h4> */}
