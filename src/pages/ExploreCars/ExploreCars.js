@@ -11,7 +11,7 @@ const ExploreCars = () => {
     const size = 9;
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/products?page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.result)

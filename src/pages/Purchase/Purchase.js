@@ -12,7 +12,7 @@ const Purchase = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/products/${id}`)
+        fetch(`http://localhost:5000/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id])
@@ -22,7 +22,7 @@ const Purchase = () => {
         data.title = product.name
         data.price = product.price
         data.status = 'pending'
-        fetch('https://salty-beyond-08378.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -42,7 +42,7 @@ const Purchase = () => {
                         <img src={product.img} alt="" />
                         <h3 className='text-4xl capitalize font-semibold my-5'>{product.name}</h3>
                         <p className='font-semibold text-xl'>Price <span className='text-red-500'>${product.price}</span></p>
-                        <p className='font-semibold'>The car has <span className='text-red-500'>{product.cc}cc</span> power.</p>
+                        {/* <p className='font-semibold'>The car has <span className='text-red-500'>{product.cc}cc</span> power.</p> */}
                         <p className='text-lg mt-5'>{product.body}</p>
                     </div>
                     <div className="puchase-info-form">

@@ -14,7 +14,6 @@ import Purchase from "./pages/Purchase/Purchase";
 import Footer from "./pages/Shared/Footer/Footer";
 import Header from "./pages/Shared/Header/Header";
 
-
 function App() {
   return (
     <AuthProvider>
@@ -45,7 +44,7 @@ function App() {
           <PrivateRoute path='/car-details/:id'>
             <Purchase></Purchase>
           </PrivateRoute>
-          <Route path='/registers'>
+          <Route path='/register'>
             <Register></Register>
           </Route>
           <PrivateRoute path='/dashboard'>
@@ -60,5 +59,4 @@ function App() {
     </AuthProvider>
   );
 }
-
 export default App;

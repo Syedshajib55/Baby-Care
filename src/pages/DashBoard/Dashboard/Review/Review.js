@@ -9,7 +9,7 @@ const Review = () => {
     const [successRating, setSuccessRating] = useState(false)
 
     const onSubmit = data => {
-        fetch('https://salty-beyond-08378.herokuapp.com/rating', {
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -34,7 +34,7 @@ const Review = () => {
                     {[...Array(5)].map((star, i) => {
                         const ratingValue = i + 1;
                         return <label key={i}>
-                            <input {...register("rating", { required: true })} type="radio" name="rating" value={ratingValue} onClick={() => setRating(ratingValue)} />
+                            <input {...register("rating", { required: true })} type="radio" name="rating" value={ratingValue} onClick={() => setRating(ratingValue)} placeholder='Details' />
                             <FaStar color={ratingValue <= (hover || rating) ? '#ffc107' : 'e4e5e9'} className='star inline-block text-4xl' onMouseEnter={() => setHover(ratingValue)} onMouseLeave={() => setHover(null)}></FaStar>
                         </label>
                     })}

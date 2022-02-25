@@ -11,7 +11,7 @@ const Payment = () => {
     const [payment, setpayment] = useState({})
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/payment/${id}`)
+        fetch(`http://localhost:5000/payment/${id}`)
             .then(res => res.json())
             .then(data => setpayment(data))
     }, [])

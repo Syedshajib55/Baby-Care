@@ -7,7 +7,7 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/orders?email=${user.email}`)
+        fetch(`http://localhost:5000/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [user.email])
@@ -15,7 +15,7 @@ const MyOrders = () => {
     const handleDeleteOrder = (id) => {
         const confirmation = window.confirm('Are you sure you want to cancel your order?')
         if (confirmation) {
-            fetch(`https://salty-beyond-08378.herokuapp.com/delete-order/${id}`, {
+            fetch(`http://localhost:5000/delete-order/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             }).then(res => res.json())

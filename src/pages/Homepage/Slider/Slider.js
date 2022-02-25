@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Hero.css'
+import './Slider.css'
 // ..
 AOS.init();
 
@@ -54,32 +54,32 @@ const Hero = () => {
             <Slider {...settings}>
                 <div className='slider-bg slide-1 slider-box bg-opacity-50 bg-blend-overlay bg-black'>
                     <div className="hero-text text-center mb-5 md:mb-0">
-                        <h2 className='text-3xl lg:text-6xl font-medium capitalize mb-5 text-white'>Best car solution and sales available</h2>
-                        <p className='md:font-medium mb-5 text-white'>We are a company who sales latest brand car from direct car company.A lot of car collection is available at our showroom.We are a renowned company all over the world for car wholesale.</p>
-                        <Link to='/explore-cars'>
+                        {/* <h2 className='text-3xl lg:text-6xl font-medium capitalize mb-5 text-white'>Best car solution and sales available</h2>
+                        <p className='md:font-medium mb-5 text-white'>We are a company who sales latest brand car from direct car company.A lot of car collection is available at our showroom.We are a renowned company all over the world for car wholesale.</p> */}
+                        {/* <Link to='/explore-cars'>
                             <button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white md:font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg mb-1'>Explore Cars</button>
                         </Link>
                         <Link to='/about'>
                             <button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white md:font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg'>About Us</button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 <div className='slider-bg slide-2 slider-box bg-opacity-50 bg-blend-overlay bg-black'>
                     <div className="hero-text text-center mb-5 md:mb-0">
-                        <h2 className='text-4xl lg:text-6xl font-medium capitalize mb-5 text-white'>New Collections and reparing</h2>
+                        {/* <h2 className='text-4xl lg:text-6xl font-medium capitalize mb-5 text-white'>New Collections and reparing</h2>
                         <p className='md:font-medium mb-5 text-white'>We are a company who sales latest brand car from direct car company.A lot of car collection is available at our showroom.We are a renowned company all over the world for car wholesale.</p>
                         <Link to='/explore-cars'>
                             <button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white md:font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg'>Explore Cars</button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 <div className='slider-bg slide-3 slider-box bg-opacity-50 bg-blend-overlay bg-black'>
                     <div className="hero-text text-center mb-5 md:mb-0">
-                        <h2 className='text-4xl lg:text-6xl font-medium capitalize mb-5 text-white'>Top Speed Cars</h2>
+                        {/* <h2 className='text-4xl lg:text-6xl font-medium capitalize mb-5 text-white'>Top Speed Cars</h2>
                         <p className='md:font-medium mb-5 text-white'>We are a company who sales latest brand car from direct car company.A lot of car collection is available at our showroom.We are a renowned company all over the world for car wholesale.</p>
                         <Link to='/explore-cars'>
                             <button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white md:font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg'>Explore Cars</button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </Slider>

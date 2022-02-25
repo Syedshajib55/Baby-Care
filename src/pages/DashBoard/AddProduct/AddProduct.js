@@ -7,7 +7,7 @@ const AddProduct = () => {
     const history = useHistory()
 
     const onSubmit = data => {
-        fetch('https://salty-beyond-08378.herokuapp.com/products', {
+        fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -29,13 +29,27 @@ const AddProduct = () => {
                     <span className='block w-20 mt-1 h-1 bg-yellow-500 mx-auto'></span>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("name", { required: true })} placeholder='Car title' /> <br />
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("price", { required: true })} placeholder='Car Price' type='number' /> <br />
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("cc", { required: true })} placeholder='Car cc' type='number' /> <br />
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("type", { required: true })} placeholder='Car type' /> <br />
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("year", { required: true })} placeholder='Car released year' type='number' /> <br />
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("body", { required: true })} placeholder='Car description' /> <br />
-                    <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("img", { required: true })} placeholder='Car Image Link' type='url' /> <br />
+                    <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("name", { required: true })} placeholder='Product title' /> <br />
+                    <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("price", { required: true })} placeholder='Product Price' type='number' /> <br />
+                    {/* <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("cc", { required: true })} placeholder='Car cc' type='number' /> <br />
+                    <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("type", { required: true })} placeholder='Car type' /> <br />
+                    <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("year", { required: true })} placeholder='Car released year' type='number' /> <br /> */}
+                    <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("body", { required: true })} placeholder='Product description' /> <br />
+                    <input className='border-b-2 w-full border-red-400
+                     pl-5 mb-5 rounded-full py-3
+                      outline-none' {...register("img", { required: true })} placeholder='Product Image Link' type='url' /> <br />
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}
 

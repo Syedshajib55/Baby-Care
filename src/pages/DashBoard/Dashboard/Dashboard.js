@@ -18,7 +18,7 @@ const Dashboard = () => {
     const history = useHistory()
 
     const handleLogOut = () => {
-        const confirmLogOut = window.confirm('Are you sure you want to log out?')
+        const confirmLogOut = window.confirm('Are you sure to log out?')
         if (confirmLogOut) {
             logOut()
             history.replace('/')
@@ -64,6 +64,7 @@ const Dashboard = () => {
                             <AdminRoute exact path={`${path}/make-admin`}>
                                 <MakeAdmin></MakeAdmin>
                             </AdminRoute>
+                            {/* uporrer sob admin hobe */}
                             <Route exact path={`${path}/my-orders`}>
                                 <MyOrders></MyOrders>
                             </Route>

@@ -42,7 +42,7 @@ const Register = () => {
                         <h4 className='text-3xl text-center my-5 font-semibold'><span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span> Or <span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span></h4>
                         <div className='text-center'>
                             <button onClick={handleGoogle} className='text-2xl mb-5 shadow px-5 py-1 rounded-lg font-medium'>Continue with <FcGoogle className='inline-block' /></button>
-                            <h3 className='text-center'>Already have an account? <Link to='/login' className='text-red-500 underline'>Login here.</Link></h3>
+                            <h3 className='text-center'>Have an account? <Link to='/login' className='text-red-500 underline'>Sign In</Link></h3>
                         </div>
                     </div>
                 </div>

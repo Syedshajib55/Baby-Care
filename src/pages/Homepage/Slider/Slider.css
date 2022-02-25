@@ -1,12 +1,13 @@
 .slider-bg{
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 550px;
+    width: 100%;
     background-position:center center;
 }
-.slide-1{background-image: url('https://i.ibb.co/sCY2N0c/tyler-clemmensen-5q1xp-kresk-unsplash.jpg');}
-.slide-2{background-image: url('https://i.ibb.co/MPjVLNZ/gabriel-gurrola-u6-BPMXg-URu-I-unsplash.jpg');}
-.slide-3{background-image: url('https://i.ibb.co/7yHTgXx/red-mini-coupe-parked-port-front-view-ship-seaside-114579-5195.jpg');}
+.slide-1{background-image: url('https://www.babycare.com.bd/image/cache/catalog/0000000000%20SUMAIA/0000000000DUCK/Duck-babycare-banner-desktop-1600x500.jpg');}
+.slide-2{background-image: url('https://www.babycare.com.bd/image/cache/catalog/00000001/Banner%20Web%20011-1600x500.jpg');}
+.slide-3{background-image: url('https://www.babycare.com.bd/image/cache/catalog/0000000000%20SUMAIA/0000000000DUCK/fisher-price%20banner%20desktop-1600x500.jpg');}
 .slider-box{
     position: relative;
 }

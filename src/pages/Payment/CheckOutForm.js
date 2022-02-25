@@ -16,7 +16,7 @@ const CheckOutForm = ({ payment }) => {
     const history = useHistory()
 
     useEffect(() => {
-        fetch('https://salty-beyond-08378.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ price })
@@ -74,7 +74,7 @@ const CheckOutForm = ({ payment }) => {
                 last4: paymentMethod.card.last4,
                 transactionId: paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `https://salty-beyond-08378.herokuapp.com/payment/${_id}`
+            const url = `http://localhost:5000/payment/${_id}`
             fetch(url, {
                 method: 'PUT',
                 headers: { 'content-type': 'application/json' },

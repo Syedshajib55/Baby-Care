@@ -72,7 +72,7 @@ const useFirebase = () => {
     // save user
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('https://salty-beyond-08378.herokuapp.com/users', {
+        fetch('http://localhost:5000/users', {
             method: method,
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
@@ -93,7 +93,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`https://salty-beyond-08378.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

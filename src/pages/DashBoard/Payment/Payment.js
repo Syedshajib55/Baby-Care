@@ -15,7 +15,7 @@ const Payment = () => {
         data.title = product.name
         data.price = product.price
         data.status = 'pending'
-        fetch('https://salty-beyond-08378.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
