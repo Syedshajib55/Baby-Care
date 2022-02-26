@@ -30,7 +30,7 @@ const ExploreCars = () => {
                             <h2 className='md:text-6xl text-5xl px-5 text-center py-10  text-white font-semibold'>Explore Our Car Collections</h2>
                         </div >
                         <div className="md:container md:mx-auto px-5 lg:px-0 py-10">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
                                 {
                                     products.map(product => <Products key={product._id} product={product}></Products>)
                                 }
