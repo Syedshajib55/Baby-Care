@@ -5,7 +5,7 @@ import { useParams } from 'react-router';
 import CheckOutForm from './CheckOutForm';
 
 
-const stripePromise = loadStripe('pk_test_51K0J00AzASBloT9io5cYKaOP4SMi14yob1txLKVFXmRVuXSoYvnVVjYBTlwvALpuzaWUEKqTQUykioCxGF05WbHj00cZfx4Dmp')
+const stripePromise = loadStripe('pk_test_51Jw3cjBp5UogvPzO9ZMrJsgf9bnSPAym5VKFPApp5zWWwPRkng9VJDVO8gm46ooZjvvMbtLgbLCbufarlz3KzkxO000XV1UJlU')
 const Payment = () => {
     const { id } = useParams()
     const [payment, setpayment] = useState({})

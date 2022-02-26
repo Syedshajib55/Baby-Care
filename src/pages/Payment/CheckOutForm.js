@@ -1,7 +1,10 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+
+import { CircularProgress } from '@mui/material';
 import { useHistory } from 'react-router-dom'
+import OrderSuccess from './OrderSuccess';
 
 
 const CheckOutForm = ({ payment }) => {
@@ -89,8 +92,6 @@ const CheckOutForm = ({ payment }) => {
                     }
                 })
         }
-
-
     }
     return (
         <div>
@@ -111,8 +112,8 @@ const CheckOutForm = ({ payment }) => {
                         },
                     }}
                 />
-                {processing ? <p>Processing..</p> : <button className='bg-red-400 text-white px-10 mt-5 py-1 rounded-lg' type="submit" disabled={!stripe || success}>
-                    Pay
+                {processing ? <CircularProgress></CircularProgress> : <button className='bg-red-400 text-white px-10 mt-5 py-1 rounded-lg' type="submit" disabled={!stripe || success}>
+                    Pay ${price}
                 </button>}
             </form>
             {error && <p className='text-red-500 mt-2'>{error}</p>}
