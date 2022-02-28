@@ -15,7 +15,7 @@ const AddProduct = () => {
             .then(data => {
                 if (data.insertedId) {
                     alert('Successfully added new product!')
-                    history.replace('/explore-cars')
+                    history.replace('/dashboard/add-product')
                     reset()
                 }
             })

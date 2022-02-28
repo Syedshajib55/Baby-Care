@@ -41,7 +41,7 @@ const Header = () => {
                                     <div className="hidden md:block text-right">
                                         <div className="ml-10 space-x-4">
                                             <NavLink exact activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/'>Home</NavLink>
-                                            <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/explore-cars'>Products</NavLink>
+                                            <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/explore-prod'>Products</NavLink>
                                             <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/about'>About Us</NavLink>
                                             {
                                                 user.email ? <div className='inline-block'>
@@ -50,8 +50,8 @@ const Header = () => {
                                                 </div> :
                                                     <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/login'>Login</NavLink>
                                             }
-                                            {/* <a><FaProfile  className='text-5xl text-red-500'></FaProfile></a> */}
-                                             <a className="ms-2 text-white font-semibold">{user?.displayName}</a>      
+                                           {/* <CgProfile className='mr-5 text-2xl cursor-pointer text-red-500 transform hover:scale-150 duration-300 transition-all'></CgProfile> */}
+                                            <a className="ms-2 text-white font-semibold">{user?.displayName}</a>      
                                         </div>
                                     </div>
                                     <div className="-mr-2 flex justify-end md:hidden">

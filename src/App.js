@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
 import About from "./pages/About/About";
 import Dashboard from "./pages/DashBoard/Dashboard/Dashboard";
-import ExploreCars from "./pages/ExploreCars/ExploreCars";
+import ExploreProd from "./pages/ExploreProd/ExploreProd";
 import Home from "./pages/Homepage/Home/Home";
 import Login from "./pages/Login/Login/Login";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
@@ -26,8 +26,8 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
-          <Route path='/explore-cars'>
-            <ExploreCars></ExploreCars>
+          <Route path='/explore-prod'>
+            <ExploreProd></ExploreProd>
           </Route>
           <Route path='/about'>
             <About></About>

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import { CircularProgress } from '@mui/material';
 import Products from '../Homepage/Products/Products';
 
-const ExploreCars = () => {
+const ExploreProd = () => {
     const [products, setProducts] = useState([])
     const { isLoading } = useAuth()
     const [pageCount, setPageCount] = useState(0)
     const [page, setPage] = useState(0)
 
-    const size = 9;
+    const size = 10;
 
     useEffect(() => {
         fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
@@ -23,14 +24,14 @@ const ExploreCars = () => {
     return (
         <>
             {
-                isLoading ? <h2 className='text-4xl text-red-500 text-center font-medium pt-30'>Loading...</h2> :
+                isLoading ? <CircularProgress></CircularProgress> :
                     <div>
                         < div className='bg-gray-700 bg-opacity-95 bg-blend-overlay flex items-center justify-center' style={{ backgroundImage: 'url(https://image.freepik.com/free-photo/car-travelling-by-sunny-road_1088-51.jpg)', width: '100%', height: '250px', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center' }
                         }>
-                            <h2 className='md:text-6xl text-5xl px-5 text-center py-10  text-white font-semibold'>Explore Our Car Collections</h2>
+                            <h2 className='md:text-6xl text-5xl px-5 text-center py-10  text-white font-semibold'>Explore Our Product Collections</h2>
                         </div >
                         <div className="md:container md:mx-auto px-5 lg:px-0 py-10">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                                 {
                                     products.map(product => <Products key={product._id} product={product}></Products>)
                                 }
@@ -48,4 +49,4 @@ const ExploreCars = () => {
 
 };
 
-export default ExploreCars;
+export default ExploreProd;
