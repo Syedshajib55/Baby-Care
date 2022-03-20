@@ -12,32 +12,22 @@ const Footer = () => {
                         <p className='text-white mt-5'>We sales new updated products of different brands. We ensure our customer satisfaction and customer is our main priority.</p>
                     </div>
                     <div className="footer-box">
-                        <h2 className='text-white text-3xl mb-3'>Quick Links</h2>
-                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Home</Link>
-                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>About</Link>
-                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>My Orders</Link>
-                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Explore Products</Link>
-                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Blogs</Link>
+                        <h2 className='text-white text-2xl bold mb-3'>Quick Links</h2>
+                        <Link to='/' className='block text-white underline mb-2 hover:text-red-400'>Home</Link>
+                        <Link to='/about' className='block text-white underline mb-2 hover:text-red-400'>About Us</Link>
+                        <Link to='/contact' className='block text-white underline mb-2 hover:text-red-400'>Contact us</Link>
+                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Shipping and Delivery</Link>
+                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Privacy Policy</Link>
                     </div>
                     <div className="footer-box">
-                        <h2 className='text-white text-3xl mb-3'>Blogs</h2>
-                        <div className="footer-blog flex mb-3">
-                            {/* <img className='w-28 rounded' src="https://image.freepik.com/free-photo/red-luxury-sedan-road_114579-5079.jpg" alt="" />
-                            <div className="blog-meta ml-5">
-                                <h4 className='text-white'>The fastest car ever is lamborgini</h4>
-                                <button className='text-white border-2 rounded-full px-3 border-red-500 mt-2'>Read More</button>
-                            </div> */}
-                        </div>
-                        <div className="footer-blog flex mb-3">
-                            {/* <img className='w-28 rounded' src="https://image.freepik.com/free-photo/blue-sport-sedan-parked-yard_114579-5078.jpg" alt="" />
-                            <div className="blog-meta ml-5">
-                                <h4 className='text-white'>It runs as fast as we think</h4>
-                                <button className='text-white border-2 rounded-full px-3 border-red-500 mt-2'>Read More</button>
-                            </div> */}
-                        </div>
+                        <h2 className='text-white text-2xl bold mb-3'>Company Information</h2>
+                        <Link to='/return-refund' className='block text-white underline mb-2 hover:text-red-400'>Refund and Return Policy</Link>
+                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Terms and Conditions</Link>
+                        <Link to='' className='block text-white underline mb-2 hover:text-red-400'>Cashback Terms & Conditions</Link>
+                        
                     </div>
                     <div className="footer-box">
-                        <h2 className='text-white text-3xl mb-3'>Contact Us</h2>
+                        <h2 className='text-white text-2xl bold mb-3'>Contact Us</h2>
                         <div className="footer-contact">
                             <span className='flex text-white items-center mb-5'><FaMapMarkerAlt className='text-red-500 text-2xl' />
                                 <p className='ml-3'> Gazipur, Dhaka, Bangladesh</p></span>

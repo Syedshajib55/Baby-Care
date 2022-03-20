@@ -13,6 +13,9 @@ import Payment from "./pages/Payment/Payment";
 import Purchase from "./pages/Purchase/Purchase";
 import Footer from "./pages/Shared/Footer/Footer";
 import Header from "./pages/Shared/Header/Header";
+import Toys from "./pages/ExploreProd/Toys";
+import Contact from "./pages/Contact/Contact";
+import ReturnRefund from "./pages/Return/return-refund";
 
 function App() {
   return (
@@ -29,8 +32,17 @@ function App() {
           <Route path='/explore-prod'>
             <ExploreProd></ExploreProd>
           </Route>
+          <Route path='/toys'>
+            <Toys></Toys>
+          </Route>
+          <Route path='/return-refund'>
+            <ReturnRefund></ReturnRefund>
+          </Route>
           <Route path='/about'>
             <About></About>
+          </Route>
+          <Route path='/contact'>
+            <Contact></Contact>
           </Route>
           <Route path='/login'>
             <Login></Login>
