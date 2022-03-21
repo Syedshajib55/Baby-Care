@@ -1,7 +1,7 @@
 # Project Name :- Modern Car House - Best car saling service all over the world.
 
 ### Full Stack Mern Project
-Server Code Link: https://github.com/monibBormon/modern-car-house-mern-stack-server-side
+Server Code Link: https://github.com/Syedshajib55/Baby-Care-Server.git
 
 ### Application Features
 
@@ -24,13 +24,3 @@ Server Code Link: https://github.com/monibBormon/modern-car-house-mern-stack-ser
 * Aos Animation
 * Node, Express, MongoDb Server
 * Api
-
-## Admin Login System
-
-* Admin Email: admin@admin.com
-* Password: 123456
-
-
-
-
-# Baby-Care

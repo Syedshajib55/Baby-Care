@@ -2,8 +2,8 @@ import React from 'react';
 
 const return_refund = () => {
     return (
-        <div>
-             <h2 className="text-2xl font-bold">What can I return </h2>
+        <div className="p-3 refund">
+            <h2 className="text-2xl font-bold">What can I return </h2>
             <p>You may return most new, unopened items sold and fulfilled by www.babycarebd.com within 3 days of delivery for a full refund.</p>
 
             <h2 className="text-2xl font-bold">Does Babycare offer replacements or exchanges?</h2>
