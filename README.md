@@ -1,7 +1,7 @@
 # Project Name :- Baby Care
 
 ### Full Stack Mern Project
-Server Code Link: https://github.com/Syedshajib55/Baby-Care-Server.git
+Server Code Link: https://github.com/Syedshajib55/Baby-Care-Server
 
 ### Application Features
 
