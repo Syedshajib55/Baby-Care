@@ -14,7 +14,7 @@ const Payment = () => {
         fetch(`http://localhost:5000/payment/${id}`)
             .then(res => res.json())
             .then(data => setpayment(data))
-    }, [])
+    }, [id])
     return (
         <div>
             <div className="container mx-auto py-10">

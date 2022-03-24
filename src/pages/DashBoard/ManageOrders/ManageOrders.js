@@ -32,6 +32,17 @@ const ManageOrders = () => {
                 }
             })
     }
+    const handleStatus2 = (id) => {
+        fetch(`http://localhost:5000/updateStatus2/${id}`, {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' }
+        }).then(res => res.json())
+            .then(data => {
+                if (data.matchedCount) {
+                    window.location.reload(true)
+                }
+            })
+    }
     return (
         <div className='container mx-auto py-10'>
             <div className="flex flex-col">
@@ -87,8 +98,9 @@ const ManageOrders = () => {
                                                 </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus(order._id)}>approve</button>
-                                                <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus1(order._id)}>on the way</button>
+                                                <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus(order._id)}>Approved</button>
+                                                <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus1(order._id)}>On The Way</button>
+                                                <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus2(order._id)}>Received</button>
                                             </td>
                                         </tr>
                                     ))}

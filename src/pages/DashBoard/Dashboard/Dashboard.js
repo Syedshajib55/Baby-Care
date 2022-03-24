@@ -18,7 +18,7 @@ const Dashboard = () => {
     const history = useHistory()
 
     const handleLogOut = () => {
-        const confirmLogOut = window.confirm('Are you sure to log out?')
+        const confirmLogOut = window.confirm('Are you sure you want to log out?')
         if (confirmLogOut) {
             logOut()
             history.replace('/')

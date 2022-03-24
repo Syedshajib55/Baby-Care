@@ -7,6 +7,7 @@ import Feature from '../Feature/Feature';
 import Slider from '../Slider/Slider';
 import Review from '../Review/Review';
 import TeamMember from '../TeamMember/TeamMember';
+import Search from '../Search/Search';
 
 const Home = () => {
     const { isLoading } = useAuth()
@@ -16,6 +17,7 @@ const Home = () => {
                 isLoading ?
                     <h2 className='text-4xl text-red-500 text-center font-medium pt-30'>Loading...</h2>
                     : <div>
+                        <Search></Search>
                         <Slider></Slider>
                         <LimitedOffer></LimitedOffer>
                         <BestSellers></BestSellers>

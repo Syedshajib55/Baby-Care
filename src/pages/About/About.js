@@ -1,17 +1,29 @@
 import React from 'react';
 import TeamMember from '../Homepage/TeamMember/TeamMember';
+import './About.css';
 
 const About = () => {
     return (
         <div>
-            <div className='bg-gray-700 bg-opacity-95 bg-blend-overlay flex items-center justify-center' style={{ backgroundImage: 'url(https://image.freepik.com/free-photo/front-car-lights-night-road_1303-17091.jpg)', width: '100%', height: '250px', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom' }}>
+            <div className='bg-gray-700 bg-opacity-95 bg-blend-overlay flex items-center justify-center' style={{ backgroundImage:
+                 'url(https://img.freepik.com/free-photo/mock-up-wall-children-s-room-with-chair-light-pink-color-wall-background-3d-rendering_41470-3754.jpg?size=626&ext=jpg&uid=R67259203)',
+                  width: '100%', height: '650px',
+                   backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover', 
+                    backgroundPosition: 'center bottom' }}>
                 <h2 className='md:text-6xl text-5xl px-5 text-center py-10  text-white font-semibold'>About Us</h2>
             </div>
             <div className="md:container md:mx-auto px-5 lg:px-0 py-10">
                 <div className="about-box">
-                    <img src="https://img.freepik.com/free-photo/pretty-sister-spending-time-with-her-baby-brother-sitting-floor-bedroom-beautiful-young-babysitter-playing-with-little-boy-indoors-holding-stuffed-toy-duck-infancy-childcare-motherhood_344912-7.jpg?size=626&ext=jpg" alt="" />
-                    <img src="https://img.freepik.com/free-photo/pretty-sister-spending-time-with-her-baby-brother-sitting-floor-bedroom-beautiful-young-babysitter-playing-with-little-boy-indoors-holding-stuffed-toy-duck-infancy-childcare-motherhood_344912-7.jpg?size=626&ext=jpg" alt="" />
-                    <p className='mt-8 text-xl mb-5'>Babycare was found back in 2012 when there were only a few eCommerce sites operating in Bangladesh. During that time, the eCommerce ecosystem was mainly focusing on B2B or C2C customers. Babycare is the first ever Bangladeshi website specialized in baby care products, for the best care you can get for your baby. At Babycare, huge range of imported premium baby care items available at your convenience! Babycare runs it’s operation through the website: www.babycarebd.com
+                    <div className=' flex items-center justify-center'>
+                        <div>
+                            <img className='images' src="https://img.freepik.com/free-photo/pretty-sister-spending-time-with-her-baby-brother-sitting-floor-bedroom-beautiful-young-babysitter-playing-with-little-boy-indoors-holding-stuffed-toy-duck-infancy-childcare-motherhood_344912-7.jpg?size=626&ext=jpg" alt="" />
+                        </div>
+                        <div>
+                            <img className='images' src="https://img.freepik.com/free-psd/baby-store-banner-template_23-2148910869.jpg?size=626&ext=jpg&uid=R67259203" alt="" />
+                        </div>
+                    </div>
+                   <p className='mt-8 text-xl mb-5'>Baby Care was found back in 2012 when there were only a few eCommerce sites operating in Bangladesh. During that time, the eCommerce ecosystem was mainly focusing on B2B or C2C customers. Babycare is the first ever Bangladeshi website specialized in baby care products, for the best care you can get for your baby. At Babycare, huge range of imported premium baby care items available at your convenience! Babycare runs it’s operation through the website: www.babycarebd.com
                     In 2018, Babycare was listed as a “Private Limited Company” under the companies’ act 1994.
 Babycare is currently providing services in all over the country while providing nationwide home delivery and Pick up from Courier is available for outside Dhaka customers. </p>
                     {/* <p>We are a car saleing company who sales modern new updated cars from the top class renowned companys cars like Audi,
