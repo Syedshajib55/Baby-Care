@@ -85,9 +85,10 @@ const CheckOutForm = ({ payment }) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    if (data.modifiedCount) {
+                    if(data.modifiedCount) {
                         history.push('/order-success')
-                    } else {
+                    }
+                    else{
                         window.reload()
                     }
                 })

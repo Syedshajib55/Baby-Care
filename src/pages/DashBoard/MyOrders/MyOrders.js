@@ -5,10 +5,9 @@ const MyOrders = () => {
     const [products, setProducts] = useState([])
     const [isDelete, setIsDelete] = useState(null)
     const { user } = useAuth()
-    let sum;
-    for(let i=0;i<products;i++){
-        sum += parseInt(products.product.price);
-    }
+    let total = products.reduce((total, item) => Number(item.price) + total, 0)
+
+    // console.log(total);
 
     useEffect(() => {
         fetch(`http://localhost:5000/orders?email=${user.email}`)
@@ -114,7 +113,7 @@ const MyOrders = () => {
                     </div>
                 </div>
             </div>
-            <h2>Total Price : {sum}</h2>
+            <p className="text-4xl text-bold text-red-500 p-5 text-center">Total Price : {total} TK</p>
         </div>
     );
 };

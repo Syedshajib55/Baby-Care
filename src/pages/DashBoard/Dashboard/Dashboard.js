@@ -7,7 +7,6 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import MyOrders from '../MyOrders/MyOrders';
-import Payment from '../Payment/Payment';
 import './Dashboard.css'
 import Review from './Review/Review';
 
@@ -38,9 +37,8 @@ const Dashboard = () => {
                                 <button className='font-semibold underline' onClick={handleLogOut}>Log Out</button>
                             </div> :
                                 <div>
-                                    <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 font-semibold mb-2 text-lg' to={`${url}/my-orders`}>My Orders</NavLink>
+                                    <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 font-semibold mb-2 text-lg' to={`${url}/my-orders`}>Cart</NavLink>
                                     <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 font-semibold mb-2 text-lg' to={`${url}/review`}>Review</NavLink>
-                                    <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 font-semibold mb-2 text-lg' to={`${url}/payment`}>Payment</NavLink>
                                     <button className='font-semibold underline' onClick={handleLogOut}>Log Out</button>
                                 </div>
                             }
@@ -70,9 +68,6 @@ const Dashboard = () => {
                             </Route>
                             <Route exact path={`${path}/review`}>
                                 <Review></Review>
-                            </Route>
-                            <Route exact path={`${path}/payment`}>
-                                <Payment></Payment>
                             </Route>
                         </Switch>
                     </div>

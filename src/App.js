@@ -16,6 +16,8 @@ import Header from "./pages/Shared/Header/Header";
 import Toys from "./pages/ExploreProd/Toys";
 import Contact from "./pages/Contact/Contact";
 import ReturnRefund from "./pages/Return/return-refund";
+import Appointment from "./pages/Appointment/Appointment";
+import DayCare from "./pages/Daycare/DayCare";
 
 function App() {
   return (
@@ -58,6 +60,12 @@ function App() {
           </PrivateRoute>
           <Route path='/register'>
             <Register></Register>
+          </Route>
+          <Route path='/appointment'>
+            <Appointment></Appointment>
+          </Route>
+          <Route path='/daycare'>
+            <DayCare></DayCare>
           </Route>
           <PrivateRoute path='/dashboard'>
             <Dashboard></Dashboard>

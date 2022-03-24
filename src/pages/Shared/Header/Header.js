@@ -1,7 +1,9 @@
 import React from 'react';
 import { Fragment } from 'react'
+import { FaBeer } from 'react-icons/fa';
 import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+
+import { MenuIcon, XIcon, logout, user } from '@heroicons/react/outline'
 import { Link, NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 // import { FaProfile } from 'react-icons/fa'
@@ -32,26 +34,30 @@ const Header = () => {
                     {({ open }) => (
                         <>
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="grid grid-cols-2 gap-4 items-center py-5">
+                                <div className="grid grid-cols-2 gap-1 items-center py-5">
                                     <div className="flex-shrink-0">
                                         <Link to='/'>
                                             <h2 className='text-red-400 font-semibold text-2xl capitalize'>Baby  <span className='text-yellow-400'>Care</span></h2>
                                         </Link>
                                     </div>
                                     <div className="hidden md:block text-right">
-                                        <div className="ml-10 space-x-4">
+                                        <div className="">
                                             <NavLink exact activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/'>Home</NavLink>
-                                            <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/explore-prod'>Products</NavLink>
-                                            <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/about'>About Us</NavLink>
+                                            <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/explore-prod'>Products</NavLink>
+                                            <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/appointment'>Doctors</NavLink>
+                                            <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/daycare'>DayCare</NavLink>
                                             {
                                                 user.email ? <div className='inline-block'>
-                                                    <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/dashboard'>Dashboard  </NavLink>
-                                                    <NavLink activeClassName='active' className='' to='/' ><button className='font-semibold text-white hover:text-red-400 duration-300' onClick={handleLogOut}> Log Out</button></NavLink>                   
+                                                    <NavLink activeClassName='active' className='text-white font-semibold px-2 hover:text-red-400 duration-300' to='/dashboard'>Dashboard  </NavLink>
+                                                    {/* <logout className="block h-6 w-6" aria-hidden="true" /> */}
+                                                    <a className="m-2 text-green-300 ">{user?.displayName}</a>
+                                                    <NavLink activeClassName='active' className='' to='/' ><button  className='font-semibold pl-1 text-red-500 hover:text-red-400 duration-300' 
+                                                    onClick={handleLogOut}>Log Out</button></NavLink>                   
                                                 </div> :
-                                                    <NavLink activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/login'>Login</NavLink>
+                                                    <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/login'>Login</NavLink>
                                             }
-                                           {/* <CgProfile className='mr-5 text-2xl cursor-pointer text-red-500 transform hover:scale-150 duration-300 transition-all'></CgProfile> */}
-                                            <a className="ms-2 text-white font-semibold">{user?.displayName}</a>      
+                                            {/* <user className="block h-6 w-6 color-red" aria-hidden="true" /> */}
+                                                  
                                         </div>
                                     </div>
                                     <div className="-mr-2 flex justify-end md:hidden">

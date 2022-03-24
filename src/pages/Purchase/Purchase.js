@@ -42,7 +42,6 @@ const Purchase = () => {
                         <img src={product.img} alt="" />
                         <h3 className='text-4xl capitalize font-semibold my-5'>{product.name}</h3>
                         <p className='font-semibold text-xl'>Price <span className='text-red-500'>${product.price}</span></p>
-                        {/* <p className='font-semibold'>The car has <span className='text-red-500'>{product.cc}cc</span> power.</p> */}
                         <p className='text-lg mt-5'>{product.body}</p>
                     </div>
                     <div className="puchase-info-form">
@@ -56,7 +55,8 @@ const Purchase = () => {
                             {/* errors will return when field validation fails  */}
                             {errors.name || errors.email || errors.address || errors.city || errors.phone ? <span className='text-red-500 font-semibold  pl-5 mb-3'>Please fill all the input correctly!</span> : ""}
 
-                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2 mt-3' type="submit" value='Continue Payment' />
+                            {/* <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2 mt-3' type="submit" value='Continue Payment' /> */}
+                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2 mt-3' type="submit" value='Add To Cart' />
                         </form>
                         <div>
                             <p className='text-black-500 mt-10 px-10'> {`/*`} Please use the demo card number <span className='font-bold'>4242 4242 4242 4242</span> then you can use any future date and in cvc type 5 digit {`*/`}</p>
