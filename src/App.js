@@ -18,6 +18,7 @@ import Contact from "./pages/Contact/Contact";
 import ReturnRefund from "./pages/Return/return-refund";
 import Appointment from "./pages/Appointment/Appointment";
 import DayCare from "./pages/Daycare/DayCare";
+import Doctors from "./pages/Doctors/Doctors";
 
 function App() {
   return (
@@ -63,6 +64,9 @@ function App() {
           </Route>
           <Route path='/appointment'>
             <Appointment></Appointment>
+          </Route>
+          <Route path='/doctors'>
+            <Doctors></Doctors>
           </Route>
           <Route path='/daycare'>
             <DayCare></DayCare>

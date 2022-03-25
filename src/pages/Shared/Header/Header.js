@@ -44,7 +44,7 @@ const Header = () => {
                                         <div className="">
                                             <NavLink exact activeClassName='active' className='text-white font-semibold hover:text-red-400 duration-300' to='/'>Home</NavLink>
                                             <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/explore-prod'>Products</NavLink>
-                                            <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/appointment'>Doctors</NavLink>
+                                            <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/doctors'>Doctors</NavLink>
                                             <NavLink activeClassName='active' className='text-white ml-2 font-semibold hover:text-red-400 duration-300' to='/daycare'>DayCare</NavLink>
                                             {
                                                 user.email ? <div className='inline-block'>
