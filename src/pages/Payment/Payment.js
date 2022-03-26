@@ -11,7 +11,7 @@ const Payment = () => {
     const [payment, setpayment] = useState({})
 
     useEffect(() => {
-        fetch(`https://fierce-earth-16415.herokuapp.com/payment/${id}`)
+        fetch(`http://localhost:5000/payment/${id}`)
             .then(res => res.json())
             .then(data => setpayment(data))
     }, [id])

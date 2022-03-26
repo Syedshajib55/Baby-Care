@@ -7,7 +7,7 @@ const AddProduct = () => {
     const history = useHistory()
 
     const onSubmit = data => {
-        fetch('https://fierce-earth-16415.herokuapp.com/products', {
+        fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

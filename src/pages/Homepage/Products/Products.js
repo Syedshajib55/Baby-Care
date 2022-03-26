@@ -14,7 +14,7 @@ const Products = ({ product }) => {
                     <h2 className='text-2xl mb-3 font-semibold capitalize'>{name}</h2>
                 </Link>
                 {/* <div className='flex justify-evenly'> */}
-                    <p className='text-lg font-semibold text-red-500 mb-3'><i className="fas "></i>{price} $</p>
+                    <p className='text-lg font-semibold text-red-500 mb-3'><i className="fas "></i>{price} TK</p>
                     {/* <h4 className='text-lg font-semibold text-red-500 mb-3'><i className="fas fa-cogs"></i> {cc}cc</h4> */}
                 {/* </div> */}
                 <Link to={`/car-details/${_id}`}>

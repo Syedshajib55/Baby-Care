@@ -21,7 +21,7 @@ const style = {
 };
 
 const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBookingSuccess }) => {
-    const { name, time } = booking;
+    const { name, time, price } = booking;
     const { user } = useAuth();
     const initialInfo = { patientName: user.displayName, email: user.email, phone: '' }
     const [bookingInfo, setBookingInfo] = useState(initialInfo);
@@ -39,12 +39,12 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
         const appointment = {
             ...bookingInfo,
             time,
+            price,
             serviceName: name,
             date: date.toLocaleDateString()
         }
-        console.log(appointment)
         // send to the server
-        fetch('https://fierce-earth-16415.herokuapp.com/appointments', {
+        fetch('http://localhost:5000/appointments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -118,7 +118,7 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
                             defaultValue={date.toDateString()}
                             size="small"
                         />
-                        <Button className="resume-btn" type="submit" variant="contained">Submit</Button>
+                        <Button type="submit" variant="contained">Submit</Button>
                     </form>
                 </Box>
             </Fade>

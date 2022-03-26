@@ -9,7 +9,7 @@ const Review = () => {
     const [successRating, setSuccessRating] = useState(false)
 
     const onSubmit = data => {
-        fetch('https://fierce-earth-16415.herokuapp.com/reviews', {
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -33,6 +32,7 @@ const DashboardAppointments = (props) => {
             <Divider />
             <Link to="/appointment"><Button className='resume-btn text-white ' color="inherit">Appointment</Button></Link>
             <Link to="/dashboard"><Button className='resume-btn text-white' color="inherit">Dashboard</Button></Link>
+            <Link to="/"><Button className='resume-btn text-white' color="inherit">HOMEPAGE</Button></Link>
             <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>
