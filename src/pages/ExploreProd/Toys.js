@@ -12,7 +12,7 @@ const Toys = () => {
     const size = 10;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
+        fetch(`https://fierce-earth-16415.herokuapp.com/products?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.result)

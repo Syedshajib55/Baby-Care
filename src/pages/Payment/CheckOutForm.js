@@ -4,7 +4,6 @@ import useAuth from '../../hooks/useAuth';
 
 import { CircularProgress } from '@mui/material';
 import { useHistory } from 'react-router-dom'
-import OrderSuccess from './OrderSuccess';
 
 
 const CheckOutForm = ({ payment }) => {
@@ -19,6 +18,7 @@ const CheckOutForm = ({ payment }) => {
     const history = useHistory()
 
     useEffect(() => {
+        // fetch('https://fierce-earth-16415.herokuapp.com/create-payment-intent', {
         fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
@@ -77,7 +77,8 @@ const CheckOutForm = ({ payment }) => {
                 last4: paymentMethod.card.last4,
                 transactionId: paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `http://localhost:5000/payment/${_id}`
+            const url = `https://fierce-earth-16415.herokuapp.com/payment/${_id}`
+            // const url = `http://localhost:5000/payment/${_id}`
             fetch(url, {
                 method: 'PUT',
                 headers: { 'content-type': 'application/json' },

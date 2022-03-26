@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [isDelete, setIsDelete] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://fierce-earth-16415.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data.result))
     }, [isDelete])
@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = (id) => {
         const confirmation = window.confirm('Are you sure product will be delete parmanently?')
         if (confirmation) {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://fierce-earth-16415.herokuapp.com/delete/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             }).then(res => res.json())

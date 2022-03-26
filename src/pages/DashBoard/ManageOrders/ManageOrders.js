@@ -4,14 +4,14 @@ const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/all-orders')
+        fetch('https://fierce-earth-16415.herokuapp.com/all-orders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [])
 
     // handle status
     const handleStatus = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://fierce-earth-16415.herokuapp.com/updateStatus/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())
@@ -22,7 +22,7 @@ const ManageOrders = () => {
             })
     }
     const handleStatus1 = (id) => {
-        fetch(`http://localhost:5000/updateStatus1/${id}`, {
+        fetch(`https://fierce-earth-16415.herokuapp.com/updateStatus1/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())
@@ -33,7 +33,7 @@ const ManageOrders = () => {
             })
     }
     const handleStatus2 = (id) => {
-        fetch(`http://localhost:5000/updateStatus2/${id}`, {
+        fetch(`https://fierce-earth-16415.herokuapp.com/updateStatus2/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         }).then(res => res.json())

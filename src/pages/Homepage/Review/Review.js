@@ -12,7 +12,7 @@ const Review = () => {
     const [ratings, setRatings] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://fierce-earth-16415.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setRatings(data))
     }, [])
