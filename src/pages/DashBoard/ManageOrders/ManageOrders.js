@@ -54,25 +54,25 @@ const ManageOrders = () => {
                                     <tr>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Name
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Product Name
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Status
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Action
                                         </th>
@@ -85,7 +85,7 @@ const ManageOrders = () => {
                                                 <div className="flex items-center">
                                                     <div className="ml-4">
                                                         <div className="text-sm font-medium text-gray-900">{order.name}</div>
-                                                        <div className="text-sm text-gray-500">{order.email}</div>
+                                                        <div className="text-sm text-red-700">{order.email}</div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -93,11 +93,11 @@ const ManageOrders = () => {
                                                 <div className="text-sm text-gray-900 capitalize">{order.title}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                <span className="px-2 inline-flex text-xl leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                                     {order.status}
                                                 </span>
                                             </td>
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-red-700">
                                                 <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus(order._id)}>Approved</button>
                                                 <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus1(order._id)}>On The Way</button>
                                                 <button className='border-2 mr-2 border-red-500 rounded-full px-2' onClick={() => handleStatus2(order._id)}>Received</button>

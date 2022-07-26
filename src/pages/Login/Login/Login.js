@@ -30,11 +30,11 @@ const Login = () => {
                             {/* errors will return when field validation fails  */}
                             <p className='text-red-500 mb-2 font-semibold'>{error}</p>
 
-                            <input className='border-2 border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Login' />
+                            <input className='border-2 resume-btn border-red-400 px-14 font-semibold text-xl cursor-pointer rounded-full bg-white mx-auto block text-red-400 py-2' type="submit" value='Login' />
                         </form>
                         <h4 className='text-3xl text-center my-5 font-semibold'><span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span> Or <span className='lg:w-52 w-20 h-1 bg-red-200 inline-block'></span></h4>
                         <div className='text-center'>
-                            <button onClick={handleGoogle} className='text-2xl mb-5 shadow px-5 py-1 rounded-lg font-medium'>Sign In with <FcGoogle className='inline-block' /></button>
+                            <button onClick={handleGoogle} className='text-2xl mb-5 resume-btn shadow px-5 py-1 rounded-lg font-medium'>Sign In with <FcGoogle className='inline-block' /></button>
                             <h3 className='text-center'>New User? <Link to='/register' className='text-red-500 underline'>Sign Up Here</Link></h3>
                         </div>
                     </div>

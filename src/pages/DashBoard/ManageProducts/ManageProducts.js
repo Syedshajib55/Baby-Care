@@ -38,19 +38,19 @@ const ManageProducts = () => {
                                     <tr>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Product Name
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Price (tk)
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Action
                                         </th>

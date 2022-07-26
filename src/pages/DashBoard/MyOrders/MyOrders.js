@@ -44,37 +44,37 @@ const MyOrders = () => {
                                     <tr>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Product Name
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Order Id
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Address
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Price (TK)
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Status
                                         </th>
                                         <th
                                             scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Action
                                         </th>
@@ -98,12 +98,12 @@ const MyOrders = () => {
                                                 <div className="text-sm text-gray-900">{product.price}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                <span className="px-2 inline-flex text-xss leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                                     {product.status}
                                                 </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <button onClick={() => handleDeleteOrder(product._id)} className='hover:text-red-400 font-semibold text-center'>Cancel</button>
+                                                <button onClick={() => handleDeleteOrder(product._id)} className='hover:text-red-400 font-semibold text-center'>Delete</button>
                                             </td>
                                         </tr>
                                     ))}
@@ -113,7 +113,7 @@ const MyOrders = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-4xl text-bold text-red-500 p-5 text-center">Total Price : {total} TK</p>
+            <p className="text-4xl text-bold text-red-700 p-5 text-center">Total Price : {total} TK</p>
         </div>
     );
 };
