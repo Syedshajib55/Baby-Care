@@ -40,7 +40,7 @@ const Purchase = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <div className="car-details">
                         <img src={product.img} alt="" />
-                        <h3 className='text-4xl capitalize font-semibold my-5'>{product.name}</h3>
+                        <h3 className='text-4xl  capitalize font-semibold my-5'>{product.name}</h3>
                         <p className='font-semibold text-xl'>Price <span className='text-red-500'>${product.price}</span></p>
                         <p className='text-lg mt-5'>{product.body}</p>
                     </div>
