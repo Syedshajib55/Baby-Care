@@ -18,9 +18,9 @@ const Home = () => {
                     <h2 className='text-4xl text-red-500 text-center font-medium pt-30'>Loading...</h2>
                     : <div>
                         <Search></Search>
+                        <BestSellers></BestSellers>
                         <Slider></Slider>
                         <LimitedOffer></LimitedOffer>
-                        <BestSellers></BestSellers>
                         <TeamMember></TeamMember>
                         <Review></Review>
                         <Feature></Feature>

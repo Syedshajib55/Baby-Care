@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route, NavLink, useHistory, useRouteMatch } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth';
 import DashboardAppointments from '../../Appointment/DashboardAppointments/DashboardAppointments';
+import Paymentt from '../../Appointment/DashboardAppointments/Paymentt/Paymentt';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddProduct from '../AddProduct/AddProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
@@ -35,13 +36,13 @@ const Dashboard = () => {
                                 <NavLink activeClassName='active' className='lg:block resume-btn mr-5 lg:mr-0 font-semibold mb-2 text-lg' to={`${url}/manage-all-products`}>Manage Products</NavLink>
                                 <NavLink activeClassName='active' className='lg:block mr-5 resume-btn lg:mr-0 font-semibold mb-2 text-lg' to={`${url}/add-product`}>Add Product</NavLink>
                                 <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 resume-btn font-semibold mb-2 text-lg' to={`${url}/make-admin`}>Make Admin</NavLink>
-                                <button className='font-semibold resume-btn' onClick={handleLogOut}>Log Out</button>
+                                <button className='font-semibold resume-btn underline' onClick={handleLogOut}>Log Out</button>
                             </div> :
                                 <div>
                                     <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 resume-btn font-semibold mb-2 text-lg' to={`${url}/my-orders`}>Cart</NavLink>
                                     <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 resume-btn font-semibold mb-2 text-lg' to={`${url}/appointment`}>Appointment</NavLink>
                                     <NavLink activeClassName='active' className='lg:block mr-5 lg:mr-0 resume-btn font-semibold mb-2 text-lg' to={`${url}/review`}>Review</NavLink>
-                                    <button className='font-semibold resume-btn underline' onClick={handleLogOut}>Log Out</button>
+                                    <button className='font-semibold resume-btn underline' onClick={handleLogOut}>Log Out </button>
                                 </div>
                             }
                         </li>
@@ -70,6 +71,9 @@ const Dashboard = () => {
                             </Route>
                             <Route exact path={`${path}/appointment`}>
                                 <DashboardAppointments></DashboardAppointments>
+                            </Route>
+                            <Route path={`${path}/payment/:appointmentId`}>
+                                <Paymentt></Paymentt>
                             </Route>
                             <Route exact path={`${path}/review`}>
                                 <Review></Review>

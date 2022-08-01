@@ -7,8 +7,9 @@ const OrderSuccess = () => {
             <div className="container mx-auto py-10 text-center">
                 <h2 className='text-4xl text-center font-semibold py-5 mb-8'>Thanks for your order. We will deliver your product asap.</h2>
                 <Link to='/explore-prod'>
-                    <button className='bg-red-500 text-white px-6 py-2 text-center'>Explore More Car</button>
+                    <button className='bg-red-500 text-white px-6 py-2 text-center'>Explore More Products</button>
                 </Link>
+                
             </div>
         </div>
     );

@@ -1,14 +1,35 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 
 const MyOrders = () => {
     const [products, setProducts] = useState([])
     const [isDelete, setIsDelete] = useState(null)
     const { user } = useAuth()
-    let total = products.reduce((total, item) => Number(item.price) + total, 0)
+    const { id } = useParams();
+    const history = useHistory();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    let total = products.reduce((total, item) => Number(item.price * item.Quantity) + total, 0)
 
-    // console.log(total);
-
+    // buy now
+    const onSubmit = data => {
+        //data.title = products.name
+        //data.price = 0
+        data.price = total;
+        data.status = 'pending'
+        fetch('http://localhost:5000/userAddress', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    history.push(`/payment-method/${data.insertedId}`)
+                    reset()
+                }
+            })
+    }
     useEffect(() => {
         fetch(`http://localhost:5000/orders?email=${user.email}`)
             .then(res => res.json())
@@ -54,12 +75,12 @@ const MyOrders = () => {
                                         >
                                             Order Id
                                         </th>
-                                        <th
+                                        {/* <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
                                         >
                                             Address
-                                        </th>
+                                        </th> */}
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xl font-medium text-red-700 uppercase tracking-wider"
@@ -91,11 +112,11 @@ const MyOrders = () => {
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="text-sm text-gray-900">{product._id}</div>
                                             </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
+                                            {/* <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="text-sm text-gray-900">{product.address}</div>
-                                            </td>
+                                            </td> */}
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-900">{product.price}</div>
+                                                <div className="text-sm text-gray-900">{ product.Quantity ? product.price * product.Quantity : product.price}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <span className="px-2 inline-flex text-xss leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -114,6 +135,23 @@ const MyOrders = () => {
                 </div>
             </div>
             <p className="text-4xl text-bold text-red-700 p-5 text-center">Total Price : {total} TK</p>
+                <div className="puchase-info-form">
+                        <h2 className='text-4xl capitalize font-semibold mb-10 text-green-500 text-center mt-10 lg:mt-0'>Fill up the form to Checkout</h2>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("name", { required: true })} placeholder='Your Name' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' defaultValue={user.email} {...register("email", { required: true })} placeholder='Email' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("address", { required: true })} placeholder='Your Address' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("city", { required: true })} placeholder='City' /> <br />
+                            <input className='border-b-2 w-full border-red-400 pl-5 mb-5 rounded-full py-3 outline-none' {...register("phone", { required: true })} type='number' placeholder='Your Phone Number' /> <br />
+                            {/* errors will return when field validation fails  */}
+                            {errors.name || errors.email || errors.address || errors.city || errors.phone ? <span className='text-red-500 font-semibold  pl-5 mb-3'>Please fill all the input correctly!</span> : ""}
+                            
+                            <input className='text-4xl resume-btn text-bold p-5 text-center' type="submit" value='Proceed to Checkout' />
+                        </form>
+                        <div>
+                            <p className='text-black-500 mt-10 px-10'> {`/*`} Please use the demo card number <span className='font-bold'>4242 4242 4242 4242</span> then you can use any future date and in cvc type 5 digit {`*/`}</p>
+                        </div>
+                    </div>
         </div>
     );
 };

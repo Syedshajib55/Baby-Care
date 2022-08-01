@@ -32,6 +32,7 @@ const ManageOrders = () => {
                 }
             })
     }
+    
     const handleStatus2 = (id) => {
         fetch(`http://localhost:5000/updateStatus2/${id}`, {
             method: 'PUT',
