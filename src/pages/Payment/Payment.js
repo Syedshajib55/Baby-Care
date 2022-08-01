@@ -20,18 +20,6 @@ const Payment = () => {
             .then(data => setProducts(data))
     }, [user.email])
 
-    const handleStatus1 = (id) => {
-        fetch(`http://localhost:5000/updateStatus1/${id}`, {
-            method: 'PUT',
-            headers: { 'content-type': 'application/json' }
-        }).then(res => res.json())
-            .then(data => {
-                if (data.matchedCount) {
-                    window.location.reload(true)
-                }
-            })
-    }
-
     useEffect(() => {
         fetch(`http://localhost:5000/payment/${id}`)
             .then(res => res.json())
