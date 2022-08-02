@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { CircularProgress } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 import Products from '../Homepage/Products/Products';
+import Search from '../Homepage/Search/Search';
+import Searchh from '../Homepage/Search/Searchh.css'
 
 const ExploreProd = () => {
     const [products, setProducts] = useState([])
@@ -21,15 +24,17 @@ const ExploreProd = () => {
                 setPageCount(pageNumber)
             })
     }, [page])
+    
     return (
         <>
             {
                 isLoading ? <CircularProgress></CircularProgress> :
                     <div>
-                        < div className='bg-gray-700 bg-opacity-95 bg-blend-overlay flex items-center justify-center' style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/mock-up-wall-children-s-room-with-chair-light-pink-color-wall-background-3d-rendering_41470-3754.jpg?size=626&ext=jpg)', width: '100%', height: '500px', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center' }
+                        < div className='bg-gray-700 bg-opacity-95 bg-blend-overlay flex items-center justify-center' style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/mock-up-wall-children-s-room-with-chair-light-pink-color-wall-background-3d-rendering_41470-3754.jpg?size=626&ext=jpg)', width: '100%', height: '300px', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center' }
                         }>
                             <h2 className='md:text-6xl text-5xl px-5 text-center py-10  text-white font-semibold'>Explore Our Product Collections</h2>
                         </div >
+                        <Search></Search>
                         <div className="md:container md:mx-auto px-5 lg:px-0 py-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                                 {

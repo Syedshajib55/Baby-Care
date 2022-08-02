@@ -6,7 +6,6 @@ import { Typography, Button, Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
 
-
 const bannerBg = {
     background: `url(${bg})`,
 

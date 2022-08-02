@@ -7,10 +7,13 @@ import Service from './../Service/Service';
 import fluoride from './doctor1.png'
 import cavity from './doctor2.png'
 import whitening from './doctor3.png'
+import austin from './austin.jpg'
+import yosuf from './yosuf.jpg'
+import bruno from './bruno.jpg'
 import Servicee from '../Servicee/Servicee';
 const services = [
     {
-        name: 'Emma Stone',
+        name: 'Linda Mary',
         description: 'Dermatologists',
         img: fluoride,
         address:'Los Angels'
@@ -26,6 +29,24 @@ const services = [
         description: 'Cardiologists',
         img: whitening,
         address:'Florida'
+    },
+    {
+        name: 'Hani B Baradi',
+        description: 'Orthodonics',
+        img: austin,
+        address:'Texas'
+    },
+    {
+        name: 'Najjia N Mahmoud',
+        description: 'Pediatric',
+        img: yosuf,
+        address:'Carolina'
+    },
+    {
+        name: 'Vikram B Reddy',
+        description: 'Cosmeric Dentistry',
+        img: bruno,
+        address:'New Jersey'
     }
 ]
 

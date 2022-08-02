@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import doctor from '../Servicess/doctor.png'
 import bg from '../Servicess/chair.png'
+import { Link } from 'react-router-dom';
 import { Button, Typography } from '@mui/material';
 
 const appointmentBanner = {
@@ -33,6 +34,8 @@ const AppointmentBanner = () => {
                         <Typography variant="h4" style={{ color: 'white' }}>
                             Make an Appointment Today
                         </Typography>
+                        <br></br>
+                        <Link className='resume-btn' style={{ backgroundColor: '#5CE7ED' }} to='appointment'>Get Appointment</Link>
                         <Typography variant="h6" sx={{ my: 5 }} style={{ color: 'white', fontSize: 14, fontWeight: 300 }}>
                         The Doctor’s Portal provides health organizations that strive for excellence and quality care, with a tool that allows physicians to measure themselves against key performance indicators set by the organization. This tool helps optimize physician practices in compliance with the organization’s guidelines, offering valuable statistics. 
                         </Typography>
