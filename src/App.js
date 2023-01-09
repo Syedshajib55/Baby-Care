@@ -36,9 +36,6 @@ function App() {
           <Route path='/explore-prod'>
             <ExploreProd></ExploreProd>
           </Route>
-          {/* <Route path='/toys'>
-            <Toys></Toys>
-          </Route> */}
           <Route path='/return-refund'>
             <ReturnRefund></ReturnRefund>
           </Route>
