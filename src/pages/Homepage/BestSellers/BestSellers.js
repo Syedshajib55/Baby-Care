@@ -42,7 +42,7 @@ const BestSellers = () => {
                         products.slice(16,22).map(product => <Products key={product._id} product={product}></Products>)
                     }
                 </div>
-                <Link to='/toys'>
+                <Link to='/explore-prod'>
                     <h3 className='text-center mt-5 md:mt-5'><button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg capitalize'>See More</button></h3>
                 </Link>
             </div>
@@ -58,7 +58,7 @@ const BestSellers = () => {
                         products.slice(28,34).map(product => <Products key={product._id} product={product}></Products>)
                     }
                 </div>
-                <Link to='/toys'>
+                <Link to='/explore-prod'>
                     <h3 className='text-center mt-5 md:mt-5'><button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg capitalize'>See More</button></h3>
                 </Link>
             </div>
@@ -74,7 +74,7 @@ const BestSellers = () => {
                         products.slice(40,46).map(product => <Products key={product._id} product={product}></Products>)
                     }
                 </div>
-                <Link to='/toys'>
+                <Link to='/explore-prod'>
                     <h3 className='text-center mt-5 md:mt-5'><button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg capitalize'>See More</button></h3>
                 </Link>
             </div>
@@ -90,7 +90,7 @@ const BestSellers = () => {
                         products.slice(34,40).map(product => <Products key={product._id} product={product}></Products>)
                     }
                 </div>
-                <Link to='/toys'>
+                <Link to='/explore-prod'>
                     <h3 className='text-center mt-5 md:mt-5'><button className='bg-red-500 rounded-full focus:ring-2 ring-offset-2 duration-300 ring-red-500 mr-3 text-white font-medium px-8 py-2 border-2 border-transparent hover:border-red-500 hover:bg-white hover:text-red-500 md:text-lg capitalize'>See More</button></h3>
                 </Link>
             </div>

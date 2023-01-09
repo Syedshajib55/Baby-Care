@@ -95,7 +95,7 @@ const CheckoutForms = ({ appointment }) => {
                 .then(res => res.json())
                 .then(data => {
                     if(data.modifiedCount) {
-                        history.push('/order-success')
+                        history.push('/OrderSsuccess')
                     }
                     else{
                         window.reload()

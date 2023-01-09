@@ -9,6 +9,7 @@ import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./pages/Login/Register/Register";
 import NotFound from "./pages/NotFound/NotFound";
 import OrderSuccess from "./pages/Payment/OrderSuccess";
+import OrderSsuccess from "./pages/Appointment/DashboardAppointments/Paymentt/OrderSsuccess/OrderSsuccess";
 import Payment from "./pages/Payment/Payment";
 import Purchase from "./pages/Purchase/Purchase";
 import Footer from "./pages/Shared/Footer/Footer";
@@ -35,9 +36,9 @@ function App() {
           <Route path='/explore-prod'>
             <ExploreProd></ExploreProd>
           </Route>
-          <Route path='/toys'>
+          {/* <Route path='/toys'>
             <Toys></Toys>
-          </Route>
+          </Route> */}
           <Route path='/return-refund'>
             <ReturnRefund></ReturnRefund>
           </Route>
@@ -55,6 +56,9 @@ function App() {
           </Route>
           <Route path='/order-success'>
             <OrderSuccess />
+          </Route>
+          <Route path='/OrderSsuccess'>
+            <OrderSsuccess />
           </Route>
           <PrivateRoute path='/car-details/:id'>
             <Purchase></Purchase>
