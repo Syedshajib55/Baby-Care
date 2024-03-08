@@ -13,7 +13,6 @@ Server Code Link: https://github.com/Syedshajib55/Baby-Care-Server
 * Responsive UI
 
 ### Application Features
-
 * Email Password Authentication
 * Private Route Setup
 * Admin Route Setup
@@ -24,7 +23,6 @@ Server Code Link: https://github.com/Syedshajib55/Baby-Care-Server
 * Responsive UI - mobile-friendly.
 
 ### Technology Used
-
 * React Js
 * Firebase
 * Stripe
